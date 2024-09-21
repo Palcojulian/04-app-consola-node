@@ -11,7 +11,11 @@ import { ServerApp } from "./presentation/server-app";
 })();
 
 async function main() {
-    const { b: base, l: limit, s: showTable, t:saveFicheroTxt } = argv;
-
-    ServerApp.run({ base, limit, showTable, saveFicheroTxt,});
+    /*  
+        Ejecutar app - Las banderas de definen en el archivo de -
+        configuracion yargs.plugin.ts
+        npx ts - node src/app -b 8 -l 5 -s -t
+    */ 
+    const { b: base, l: limit, s: showTable, t:saveFicheroTxt, d: destination, n: name } = argv;
+    ServerApp.run({ base, limit, showTable, saveFicheroTxt, destination, name});
 }
