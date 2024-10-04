@@ -26,5 +26,8 @@ export class ServerApp {
 
         if (showTable) console.log(table);
 
+        (wasCreatedFile)
+            ? console.log('File created')
+            : console.error('File not created');       
     }
 }
