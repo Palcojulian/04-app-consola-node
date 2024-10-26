@@ -22,7 +22,7 @@ jobs:
         with:
           node-version: 20.16.0
           cache: 'npm'
-      - run: npm i
+      - run: npm i --no-fund --no-audit
       - run: npm run test
       - run: npm run build
 
